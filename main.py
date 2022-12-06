@@ -3,5 +3,9 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/")
-def home():
-	return {"Hola": "Mundo"}
+async def home():
+	return {"Estamos en el inicio de la pagina"}
+
+@app.get("/Facturación")
+async def Facturación():
+	return {"Estamos en el area de Facturación"}
